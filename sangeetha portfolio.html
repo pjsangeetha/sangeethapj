@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangeetha P J | AI & Data Science | Full Stack Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            dark: '#0b0f17',
+                            card: '#111827',
+                            border: '#1f2937'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow { box-shadow: 0 0 25px rgba(34, 197, 94, 0.15); }
+        .glow-hover:hover { box-shadow: 0 0 30px rgba(34, 197, 94, 0.3); }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-200 font-sans antialiased selection:bg-brand-500 selection:text-black">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold tracking-tight text-white">
+                Sangeetha <span class="text-brand-500">P J</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
+                <a href="#skills" class="hover:text-brand-500 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-brand-500 transition-colors">Projects</a>
+                <a href="#education" class="hover:text-brand-500 transition-colors">Education</a>
+                <a href="#contact" class="px-4 py-2 bg-brand-500 hover:bg-brand-600 text-black font-semibold rounded-lg transition-all">
+                    Contact Me
+                </a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block text-gray-300 hover:text-brand-500 py-2">About</a>
+            <a href="#skills" class="block text-gray-300 hover:text-brand-500 py-2">Skills</a>
+            <a href="#projects" class="block text-gray-300 hover:text-brand-500 py-2">Projects</a>
+            <a href="#education" class="block text-gray-300 hover:text-brand-500 py-2">Education</a>
+            <a href="#contact" class="block text-center bg-brand-500 text-black font-semibold py-2 rounded-lg">Contact Me</a>
+        </div>
+    </header>
+
+    <main class="pt-16">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-4xl mx-auto text-center z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-500 text-xs sm:text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span> Open for Opportunities
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-emerald-300">Sangeetha P J</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-8 font-normal">
+                    AI & Data Science Student | Full Stack Developer
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-black font-bold rounded-lg shadow-lg shadow-brand-500/20 transition-all">
+                        View Projects <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-brand-card hover:bg-gray-800 text-white font-semibold rounded-lg border border-brand-border transition-all">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <div class="mt-12 flex justify-center space-x-6 text-gray-400">
+                    <a href="https://github.com" target="_blank" class="hover:text-brand-500 text-xl transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="hover:text-brand-500 text-xl transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:sangeethapj518@gmail.com" class="hover:text-brand-500 text-xl transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-20 border-t border-brand-border/50 bg-brand-dark/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-2">About Me</h2>
+                    <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-5 flex justify-center">
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border-2 border-brand-500/30 glow flex flex-col items-center justify-center bg-brand-card">
+                            <i class="fa-solid fa-user-astronaut text-6xl text-brand-500 mb-3"></i>
+                            <span class="text-xs uppercase tracking-widest text-gray-400">Sangeetha P J</span>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-7 space-y-4">
+                        <h3 class="text-2xl font-bold text-white">Bridging Artificial Intelligence and Modern Web Engineering</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            I am an undergraduate student studying **Artificial Intelligence and Data Science** at **Vel Tech Multi Tech Engineering College**. Passionate about leveraging data to build intelligent systems, my work bridges machine learning, data engineering, and end-to-end full-stack web application development.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            With hands-on experience in building predictive models and responsive user interfaces, I focus on transforming complex algorithmic concepts into efficient, practical digital solutions. I am eager to apply my technical background to real-world software and data science challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="py-20 border-t border-brand-border/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-2">Technical Skills</h2>
+                    <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Programming Languages -->
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border glow-hover transition-all">
+                        <div class="w-12 h-12 bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-500 text-xl mb-4">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Programming Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-brand-dark text-gray-300 text-xs rounded-md border border-brand-border">Python</span>
+                            <span class="px-3 py-1 bg-brand-dark text-gray-300 text-xs rounded-md border border-brand-border">Java</span>
+                            <span class="px-3 py-1 bg-brand-dark text-gray-300 text-xs rounded-md border border-brand-border">C++</span>
+                            <span class="px-3 py-1 bg-brand-dark text-gray-300 text-xs rounded-md border border-brand-border">SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks & Tools -->
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border glow-hover transition-all">
+                        <div class="w-12 h-12 bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-500 text-xl mb-4">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Web Frameworks & Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-brand-dark text-gray-300 text-xs rounded-md border border-brand-border">React</span>
+                            <span class="px-3 py-1 bg-brand-dark text-gray-300 text-xs rounded-md border border-brand-border">Node.js</span>
+                            <span class="px-3 py-1 bg-brand-dark text-gray-300 text-xs rounded-md border border-brand-border">HTML5 / CSS3</span>
+                            <span class="px-3 py-1 bg-brand-dark text-gray-300 text-xs rounded-md border border-brand-border">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="py-20 border-t border-brand-border/50 bg-brand-dark/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-2">Featured Projects</h2>
+                    <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden glow-hover transition-all">
+                        <div class="h-48 bg-gray-800 flex items-center justify-center border-b border-brand-border">
+                            <i class="fa-solid fa-shield-halved text-6xl text-brand-500"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Crime Hotspot Detection and Smart Security System</h3>
+                            <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                                An end-to-end intelligent spatial analysis system designed to predict high-risk crime zones and improve public safety through predictive machine learning models and spatial visualization.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-brand-500/10 text-brand-500 px-2.5 py-1 rounded">Python</span>
+                                <span class="text-xs bg-brand-500/10 text-brand-500 px-2.5 py-1 rounded">Scikit-Learn</span>
+                                <span class="text-xs bg-brand-500/10 text-brand-500 px-2.5 py-1 rounded">LSTM</span>
+                                <span class="text-xs bg-brand-500/10 text-brand-500 px-2.5 py-1 rounded">React</span>
+                                <span class="text-xs bg-brand-500/10 text-brand-500 px-2.5 py-1 rounded">Node.js</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-brand-border">
+                                <a href="#" class="text-sm font-semibold text-white hover:text-brand-500 transition-colors">GitHub Repository <i class="fa-brands fa-github ml-1"></i></a>
+                                <a href="#" class="text-sm font-semibold text-brand-500 hover:underline">Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="py-20 border-t border-brand-border/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-2">Education</h2>
+                    <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="max-w-3xl mx-auto bg-brand-card p-6 sm:p-8 rounded-2xl border border-brand-border flex items-start gap-4">
+                    <div class="w-12 h-12 bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-500 shrink-0">
+                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-brand-500 font-semibold uppercase tracking-wider">Undergraduate Studies</span>
+                        <h3 class="text-xl font-bold text-white mt-1">B.Tech in Artificial Intelligence & Data Science</h3>
+                        <p class="text-gray-300 font-medium text-sm mt-1">Vel Tech Multi Tech Engineering College</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 border-t border-brand-border/50 bg-brand-dark/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-2">Get In Touch</h2>
+                    <p class="text-gray-400 max-w-md mx-auto text-sm">Feel free to reach out for collaborations, project inquiries, or job opportunities.</p>
+                    <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full mt-4"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                    <!-- Email Card -->
+                    <a href="mailto:sangeethapj518@gmail.com" class="bg-brand-card p-6 rounded-2xl border border-brand-border flex flex-col items-center text-center glow-hover transition-all group">
+                        <div class="w-12 h-12 bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-500 text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <span class="text-xs text-gray-400 uppercase font-semibold mb-1">Email</span>
+                        <span class="text-sm text-white font-medium group-hover:text-brand-500 transition-colors break-all">sangeethapj518@gmail.com</span>
+                    </a>
+
+                    <!-- Location Card -->
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border flex flex-col items-center text-center glow-hover transition-all">
+                        <div class="w-12 h-12 bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-500 text-xl mb-4">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <span class="text-xs text-gray-400 uppercase font-semibold mb-1">Location</span>
+                        <span class="text-sm text-white font-medium">Chennai, Tamil Nadu</span>
+                    </div>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://linkedin.com" target="_blank" class="bg-brand-card p-6 rounded-2xl border border-brand-border flex flex-col items-center text-center glow-hover transition-all group">
+                        <div class="w-12 h-12 bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-500 text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <span class="text-xs text-gray-400 uppercase font-semibold mb-1">LinkedIn</span>
+                        <span class="text-sm text-white font-medium group-hover:text-brand-500 transition-colors">Connect on LinkedIn</span>
+                    </a>
+
+                    <!-- GitHub Card -->
+                    <a href="https://github.com" target="_blank" class="bg-brand-card p-6 rounded-2xl border border-brand-border flex flex-col items-center text-center glow-hover transition-all group">
+                        <div class="w-12 h-12 bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-500 text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <span class="text-xs text-gray-400 uppercase font-semibold mb-1">GitHub</span>
+                        <span class="text-sm text-white font-medium group-hover:text-brand-500 transition-colors">View GitHub Profile</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-brand-border text-center text-xs text-gray-500">
+        <p>&copy; <span id="year"></span> Sangeetha P J. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
